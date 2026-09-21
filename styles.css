@@ -1,0 +1,223 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #faf6ef;
+  color: #352b26;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: #654331;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #352b26;
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #654331;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #654331;
+}
+
+.header-content {
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+header img {
+  display: block;
+  width: 115px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+main {
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: #654331;
+  line-height: 1.2;
+}
+
+h1 { font-size: 32px; margin: 0 0 20px; }
+h2 { font-size: 26px; margin: 0 0 16px; }
+h3 { font-size: 20px; margin: 0 0 12px; }
+p { max-width: 70ch; margin: 0 0 18px; }
+li { margin-bottom: 8px; }
+
+section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #654331;
+}
+
+section h2:not(:first-child) { margin-top: 28px; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+picture img { display: block; width: 100%; }
+figure { margin: 24px 0; }
+figcaption { max-width: 50ch; margin-top: 8px; }
+audio { max-width: 100%; margin-bottom: 16px; }
+address { font-style: normal; margin-bottom: 16px; }
+
+.featured-layout,
+.product-intro,
+.team-layout,
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.featured-layout > *,
+.team-layout > *,
+.contact-layout > * {
+  min-width: 0;
+}
+
+.product-intro img { align-self: flex-start; }
+.visit-information { margin-top: 0; }
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 24px;
+  padding: 18px;
+  border: 1px solid #654331;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+legend { padding: 0 8px; font-weight: bold; color: #654331; }
+label { display: inline-block; margin-bottom: 6px; font-weight: bold; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #654331;
+  border-radius: 4px;
+  color: #352b26;
+  background-color: #ffffff;
+  font: inherit;
+}
+
+textarea { resize: vertical; }
+
+button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #654331;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover { background-color: #352b26; }
+
+#form-note, #pickup-help, #details-help, #allergy-help {
+  font-size: 15px;
+}
+
+footer {
+  padding: 24px 4%;
+  border-top: 1px solid #654331;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p { margin: 4px auto; }
+
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main { padding-top: 40px; padding-bottom: 56px; }
+  h1 { font-size: 40px; }
+
+  .featured-layout,
+  .product-intro,
+  .team-layout,
+  .contact-layout {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .featured-layout, .product-intro { align-items: center; }
+  .featured-layout picture { flex: 3; }
+  .featured-details { flex: 2; }
+  .product-intro p { flex: 1; }
+  .team-layout > div { flex: 1; }
+  .contact-layout form { flex: 2; }
+  .visit-information { flex: 1; padding-top: 20px; }
+  fieldset { padding: 24px; }
+}

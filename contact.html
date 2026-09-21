@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="header-content">
+    <a href="index.html">
+      <img src="Bakery_c/bakery-logo_c.png"
+        alt="North Star Bakery home" width="180">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <h1>Questions and preorder requests</h1>
+    <p>Tell us what you have in mind, from a loaf for the weekend to
+      treats for a gathering. Required fields are marked "required".</p>
+    <p id="form-note">Online requests are not available yet.</p>
+    <div class="contact-layout">
+    <form id="request-form" action="contact.html#request-form" method="get"
+      aria-describedby="form-note">
+      <fieldset>
+        <legend>Your contact information</legend>
+        <p>
+          <label for="customer-name">Name (required)</label><br>
+          <input type="text" id="customer-name" name="customer-name"
+            autocomplete="name" required maxlength="100">
+        </p>
+        <p>
+          <label for="email">Email (required)</label><br>
+          <input type="email" id="email" name="email"
+            autocomplete="email" required maxlength="254">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Your bakery request</legend>
+        <p>
+          <label for="request-type">Request type (required)</label><br>
+          <select id="request-type" name="request-type" required>
+            <option value="">Choose a request type</option>
+            <option value="preorder">Preorder request</option>
+            <option value="question">General question</option>
+            <option value="event">Cake or event inquiry</option>
+          </select>
+        </p>
+        <p>
+          <label for="pickup-date">Preferred pickup date</label><br>
+          <input type="date" id="pickup-date" name="pickup-date"
+            aria-describedby="pickup-help">
+        </p>
+        <p id="pickup-help">For preorders, choose a preferred date.
+          Leave blank for general questions. We are closed Mondays.
+          Allow two days for breads and pastries, or five days for cakes.</p>
+        <p>
+          <label for="item-details">Item details or question (required)</label><br>
+          <textarea id="item-details" name="item-details" rows="5" cols="28"
+            required minlength="10" maxlength="2000"
+            aria-describedby="details-help"></textarea>
+        </p>
+        <p id="details-help">Use at least 10 characters. Include item names,
+          quantities, and any occasion or cake size, or describe your question.</p>
+        <p>
+          <label for="allergy-notes">Allergy notes (optional)</label><br>
+          <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="28"
+            maxlength="1000" aria-describedby="allergy-help"></textarea>
+        </p>
+        <p id="allergy-help">Tell us about any allergies we should discuss.
+          Our kitchen handles wheat, milk, eggs, nuts, and sesame.</p>
+      </fieldset>
+      <p><button type="submit">Check details</button></p>
+    </form>
+    <section class="visit-information">
+      <h2>Find us</h2>
+      <address>North Star Bakery<br>
+        125 Maple Street<br>Brookside, CO 80000</address>
+      <p>Our entrance and pickup counter are on Maple Street.</p>
+      <h2>Hours of operation</h2>
+      <ul>
+        <li>Tuesday through Friday: 7 a.m. to 5 p.m.</li>
+        <li>Saturday and Sunday: 8 a.m. to 2 p.m.</li>
+        <li>Monday: closed.</li>
+      </ul>
+    </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Handmade for our neighborhood.</p>
+
+  </footer>
+</body>
+</html>
